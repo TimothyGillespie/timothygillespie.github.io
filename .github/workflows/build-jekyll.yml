@@ -1,0 +1,23 @@
+name: Build Jekyll
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-jekyll:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v1
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+      - uses: helaili/jekyll-action@v2
+        with:
+          keep_history: true
+          token: ${{ secrets.JEKYLL_PAT }}
+          target_branch: gh-pages
