@@ -1,3 +1,0 @@
-# Recommended to run locally with: jekyll serve --config _config.yml,_local.yml --livereload
-baseurl: ""
-url: "localhost:4000"
