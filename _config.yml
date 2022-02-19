@@ -25,14 +25,19 @@ email: timothy@gillespie.eu
 #  line in _config.yml. It will appear in your document head meta (for
 #  Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "timothygillespie.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "www.gillespie.eu" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 github_username:  TimothyGillespie
+
+tag_page_layout: tag_page
+tag_page_dir: tag
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll_github_sample
+  - jekyll-sitemap
 
 # Exclude from processing.
 # The following items will not be processed, by default.
